@@ -8,7 +8,7 @@
         <div style="height: 100px; display: flex; flex-direction: column; justify-content: space-between;">
             <div class="animation btn-group" style="display: flex; justify-content: center; align-items: center;">
                 <a href="#" data-scroll="nextSlide" class="btn btn-transparent btn-arrow btn-arrow-down">DALEJ</a>
-                <a href="#" onClick="fullpage_api.moveTo(9);" class="btn btn-red btn-arrow">DOWIEDZ SIĘ WIĘCEJ</a>
+                <a href="#" onClick="fullpage_api.moveTo(9);" class="btn btn-red btn-arrow"><?php echo $button_title; ?></a>
             </div>
         </div>
     </div>

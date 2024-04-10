@@ -293,7 +293,17 @@
 
                 <div class="animation btn-group">
                     <a href="#" data-scroll="nextSlide" class="btn btn-transparent btn-arrow btn-arrow-down">DALEJ</a>
-                    <a href="#" onClick="fullpage_api.moveTo(9);" class="btn btn-red btn-arrow">DOWIEDZ SIĘ WIĘCEJ</a>
+                    <?php
+                        $button_title = 'Dowiedz się więcej';
+                        if(isset($_GET['parametr'])){
+                        if ($_GET['parametr'] == 'dowiedz') {
+                            $button_title = 'Dowiedz się więcej';
+                        } else if ($_GET['parametr'] == 'zamow') {
+                            $button_title = 'Zamów ofertę';
+                        }
+                    }
+                        ?>
+                    <a href="#" onClick="fullpage_api.moveTo(9);" class="btn btn-red btn-arrow"><?php echo $button_title; ?></a>
                 </div>
 
             </div>
@@ -380,7 +390,7 @@
 
                 <div class="animation btn-group">
                     <a href="#" data-scroll="nextSlide" class="btn btn-transparent btn-arrow btn-arrow-down">DALEJ</a>
-                    <a href="#" onClick="fullpage_api.moveTo(9);" class="btn btn-red btn-arrow">DOWIEDZ SIĘ WIĘCEJ</a>
+                    <a href="#" onClick="fullpage_api.moveTo(9);" class="btn btn-red btn-arrow"><?php echo $button_title; ?></a>
                 </div>
 
             </div>
@@ -429,7 +439,7 @@
                     </p>
                     <div class="animation btn-group">
                         <a href="#" data-scroll="nextSlide" class="btn-white btn-bordered btn-arrow btn-arrow-down">DALEJ</a>
-                        <a href="#" onClick="fullpage_api.moveTo(9);" class="btn-primary btn-arrow">DOWIEDZ SIĘ WIĘCEJ</a>
+                        <a href="#" onClick="fullpage_api.moveTo(9);" class="btn-primary btn-arrow"><?php echo $button_title; ?></a>
                     </div>
                 </div>
 
@@ -459,7 +469,7 @@
                     </p>
                     <div class="animation btn-group">
                         <a href="#" data-scroll="nextSlide" class="btn-white btn-bordered btn-arrow btn-arrow-down">DALEJ</a>
-                        <a href="#" onClick="fullpage_api.moveTo(9);" class="btn-primary btn-arrow">DOWIEDZ SIĘ WIĘCEJ</a>
+                        <a href="#" onClick="fullpage_api.moveTo(9);" class="btn-primary btn-arrow"><?php echo $button_title; ?></a>
                     </div>
                 </div>
 
@@ -493,7 +503,7 @@
                         </p>
                         <div class="animation btn-group">
                             <a href="#" data-scroll="nextSlide" class="btn-white btn-bordered btn-arrow btn-arrow-down">DALEJ</a>
-                            <a href="#" onClick="fullpage_api.moveTo(9);" class="btn-primary btn-arrow">DOWIEDZ SIĘ WIĘCEJ</a>
+                            <a href="#" onClick="fullpage_api.moveTo(9);" class="btn-primary btn-arrow"><?php echo $button_title; ?></a>
                         </div>
                     </div>
 
@@ -526,7 +536,7 @@
                     </p>
                     <div class="animation btn-group">
                         <a href="#" data-scroll="nextSlide" class="btn-white btn-bordered btn-arrow btn-arrow-down">DALEJ</a>
-                        <a href="#" onClick="fullpage_api.moveTo(9);" class="btn-primary btn-arrow">DOWIEDZ SIĘ WIĘCEJ</a>
+                        <a href="#" onClick="fullpage_api.moveTo(9);" class="btn-primary btn-arrow"><?php echo $button_title; ?></a>
                     </div>
                 </div>
 
@@ -568,7 +578,7 @@
 
                         <div class="animation btn-group">
                             <!--<a href="#" data-scroll="nextSlide" class="btn-white btn-bordered btn-arrow btn-arrow-down">DALEJ</a>-->
-                            <a href="#" onClick="fullpage_api.moveTo(9);" class="btn-primary btn-arrow">DOWIEDZ SIĘ WIĘCEJ</a>
+                            <a href="#" onClick="fullpage_api.moveTo(9);" class="btn-primary btn-arrow"><?php echo $button_title; ?></a>
                         </div>
 
                     </div>
