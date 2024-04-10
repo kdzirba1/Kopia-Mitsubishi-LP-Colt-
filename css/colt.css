@@ -1,0 +1,537 @@
+
+
+:root {
+    --var-color-white: #fff;
+    --var-color-black: #000;
+    --var-color-red: #ED0000;
+    --var-color-primary: #ED0000;
+}
+
+
+
+.hide {
+    display: none !important;
+}
+
+
+
+.bg-section {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.section_container{
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 98vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 10vh;
+    padding-bottom: 2vh;
+    padding-left: 10px;
+    padding-right: 10px;  
+    gap: 30px;  
+    overflow: hidden;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: unset;    
+
+}
+
+
+
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.btn {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21.6px;
+    padding: 7px 25px;
+    display: inline-block;
+    position: relative;
+    text-decoration: none !important;
+    transition: background .3s ease, color .3s ease, opacity .3s ease;
+    -webkit-transition: background .3s ease, color .3s ease, opacity .3s ease;
+}
+
+.btn-transparent{
+    color: var(--var-color-white);
+    background-color: unset;
+    border: 1px var(--var-color-white) solid;
+}
+
+.btn-red{
+    color: var(--var-color-white);
+    background-color: var(--var-color-red);
+    border: 2px solid var(--var-color-red);
+}
+
+
+.btn-arrow {
+    padding: 7px 53px 6px 35px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 31.2px;
+}
+
+#fullpage .btn-arrow::before {
+    content: '';
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url('https://static.mitsubishi.pl/lp/lp-mitsubishi-models/images/arrow-right-white.svg') no-repeat 50% 50%;
+    background-size: cover;
+    width: 34px;
+    height: 33px;
+    transition: background .3s ease;
+    -webkit-transition: background .3s ease;
+}
+
+.btn-arrow.btn-arrow-down::before {
+    transform: translateY(-50%) rotate(90deg) !important;
+}
+
+
+
+
+
+.title{
+    color: var(--var-color-white);
+    font-size: 8vmin;
+    line-height: 9vmin;
+    letter-spacing: 0.2vmin;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+
+.subtitle{
+    color: var(--var-color-white);
+    letter-spacing: 0.5vmin;
+    font-size: 2vmin;
+    line-height: 3vmin;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+
+/* MODAL */
+
+#modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 0px;
+    width: 0px;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+    background: #ffffff;
+    z-index: 9;
+    opacity: 0;
+    transition: opacity 0.5s, visibility 0s 0.5s;
+}
+#modal.active {
+    height: auto;
+    width: auto;
+    opacity: 0.98;
+    transition: opacity 0.5s;
+}
+#modal .disclaimer{
+    color: #000000;
+    font-size: 12px;
+    line-height: 20px;
+    padding-bottom: 20px;
+    text-align: justify;
+}
+
+
+.close-button {
+    max-width: 100%;
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+      }
+
+      
+/* MODAL */
+
+
+
+/* SECTION HERO */
+
+
+
+.webp #fullpage .section-hero {
+    background-image: linear-gradient(rgba(0,0,0,.0),rgba(0,0,0,.0)), url(../images/colt/section-hero-022024.webp);
+    background-position: 50% 50%;
+}
+
+.no-webp #fullpage .section-hero {
+    background-image: linear-gradient(rgba(0,0,0,.0),rgba(0,0,0,.0)), url(../images/colt/section-hero-022024.jpg);
+    background-position: 50% 50%;
+}
+
+.section-hero .section_container{
+    justify-content: end;
+}
+
+.section-hero .title {
+    font-size: 6vmin;
+}
+
+
+/* SECTION HERO */
+
+
+
+
+
+
+/* SECTION BENEFITS */
+
+.section-benefits ul{
+    line-height: 40px;
+}
+
+.section-benefits .content {
+    justify-content: space-between;
+    /*pointer-events: none;*/
+}
+
+
+.section-benefits .bg_benefit_1{
+    position: absolute;
+    width: 55%;
+    height: 90%;
+    background-image: linear-gradient(rgba(0,0,0,.0),rgba(0,0,0,.7)),url(../images/colt/benefits/bg_benefit_1.jpg);
+    background-position: 50% 70%;
+    background-size: cover;
+    left: 0px;
+    top: 0px;
+    /*transition: transform 0.3s;  Dodaj przejście, aby efekt był płynny */
+}
+
+.section-benefits .bg_benefit_1:hover {
+  /*transform: scale(1.1);  Skaluj tło po najechaniu myszką */
+}
+
+
+
+.section-benefits .bg_benefit_2{
+    position: absolute;
+    width: 50%;
+    height: 90%;
+    background-image: linear-gradient(rgba(0,0,0,.0),rgba(0,0,0,.9)),url(../images/colt/benefits/bg_benefit_2.jpg);
+    background-position: 50% 70%;
+    background-size: cover;
+    right: 0px;
+    bottom: 0px;    
+    /*transition: transform 0.3s;  Dodaj przejście, aby efekt był płynny */
+}
+
+.section-benefits .bg_benefit_2:hover {
+  /*transform: scale(1.1);  Skaluj tło po najechaniu myszką */
+}
+
+
+.section-benefits .centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.section-benefits .title {
+    text-transform: uppercase;
+    font-size: 8vmin;
+}
+
+.section-benefits .subtitle {
+    text-transform: uppercase;
+    font-size: 3vmin;
+}
+
+.section-benefits .benefits {
+    padding-top: 50px;
+    display: flex;
+    width: 70%;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.section-benefits .benefit {
+    width: 60%;
+}
+
+.section-benefits .benefit_2 {
+
+}
+
+.section-benefits .benefit_2 {
+    /*float: right;*/
+}
+
+
+
+.section-benefits .value {
+    font-size: 7vmin;
+    font-weight: 700;
+}
+
+
+
+/* SECTION BENEFITS */
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:768px) {
+
+
+    .section_container{
+        max-width: 1200px;
+        margin: 0 auto;
+            height: 92vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 10vh;
+        padding-bottom: 2vh;
+        padding-left: 10px;
+        padding-right: 10px;  
+        gap: 30px;  
+        overflow: hidden;
+    }
+
+
+
+    .btn-group {
+        gap: 1rem;
+    }
+
+    .btn {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21.6px;
+    }
+    
+
+    
+    
+    .btn-arrow {
+            padding: 10px 38px 10px 15px;
+            font-size: 14px;
+            width: auto;
+            height: auto;
+        }
+    
+    #fullpage .btn-arrow::before {
+            width: 26px;
+            height: 24px;
+    }
+    
+
+
+    .title {
+        font-size: 9vmin;
+        line-height: 10vmin;
+        letter-spacing: 0.2vmin;
+        margin-bottom: 15px;
+    }
+
+    .subtitle {
+        color: var(--var-color-white);
+        letter-spacing: 0.6vmin;
+        font-size: 4.5vmin;
+        line-height: 5vmin;
+
+    }
+
+
+
+
+/* MODAL */
+
+    #modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 0px;
+        width: 0px;
+        transform: translate(-50%, -50%);
+        padding: 50px;
+        background: #ffffff;
+        z-index: 9;
+        opacity: 0;
+        transition: opacity 0.5s, visibility 0s 0.5s;
+    }
+    #modal.active {
+        height: 60%;
+        width: 95%;
+        opacity: 0.98;
+        transition: opacity 0.5s;
+        overflow: scroll;
+    }
+    #modal .disclaimer{
+        color: #000000;
+        font-size: 12px;
+        line-height: 20px;
+        padding-bottom: 20px;
+        text-align: justify;
+    }
+
+
+      
+
+    /* MODAL */
+
+
+
+
+    /* SECTION HERO */
+
+    .webp #fullpage .section-hero {
+        background-image: linear-gradient(rgba(0,0,0,.0),rgba(0,0,0,.3)), url(../images/colt/section-hero-022024-mobile.webp);
+        background-position: 50% 70%;
+    }
+
+    .no-webp #fullpage .section-hero {
+        background-image: linear-gradient(rgba(0,0,0,.0),rgba(0,0,0,.3)), url(../images/colt/section-hero-022024-mobile.jpg);
+        background-position: 50% 70%;
+    }
+
+    .section-hero .title {
+        font-size: 10vmin;
+        line-height: 12vmin;
+    }
+
+
+    /* SECTION HERO */
+
+
+    /* SECTION BENEFITS */
+
+    .section-benefits .content {
+        justify-content: space-between;
+        /*pointer-events: none;*/
+    }
+
+
+    .section-benefits .bg_benefit_1{
+            position: absolute;
+            width: 0;
+            height: 0;
+        background-image: linear-gradient(rgba(0,0,0,.0),rgba(0,0,0,.7)),url(../images/colt/benefits/bg_benefit_1.jpg);
+        background-position: 50% 70%;
+        background-size: cover;
+        left: 0px;
+        top: 0px;
+        transition: transform 0.3s; /* Dodaj przejście, aby efekt był płynny */
+    }
+
+
+
+
+
+    .section-benefits .bg_benefit_2{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(rgba(0,0,0,.0),rgba(0,0,0,.7)),url(../images/colt/benefits/bg_benefit_2.jpg);
+        background-position: 75% 50%;
+        background-size: cover;
+        right: 0px;
+        bottom: 0px;    
+        transition: transform 0.3s; /* Dodaj przejście, aby efekt był płynny */
+    }
+
+
+
+
+    .section-benefits .centered {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-benefits .title {
+        text-transform: uppercase;
+        font-size: 8vmin;
+    }
+
+    .section-benefits .subtitle {
+        text-transform: uppercase;
+            font-size: 4vmin;
+    }
+
+    .section-benefits .benefits {
+        padding-top: 100px;
+        display: flex;
+            width: 100%;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .section-benefits .benefit {
+        width: 100%;
+    }
+
+    .section-benefits ul{
+        font-size: 4vmin;
+    }
+
+    .section-benefits .benefit_2 {
+
+    }
+
+    .section-benefits .benefit_2 {
+       /* float: right;*/
+    }
+
+
+
+    .section-benefits .value {
+        font-size: 7vmin;
+        font-weight: 700;
+    }
+
+
+
+    /* SECTION BENEFITS */
+
+
+
+
+}

@@ -1,0 +1,233 @@
+/* before premiere */
+
+#main .bg-section {
+    background-color: var(--var-color-black)
+}
+
+#main .bg-section[data-section="1"] {
+    background-size: 55%;
+    background-position: 55% 30%;
+}
+
+#main .bg-section:first-of-type {
+    position: relative;
+}
+
+#main .bg-section:first-of-type::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(180deg, rgb(0, 0, 0) 48%, rgb(2, 2, 2) 100%);
+    z-index: 99;
+}
+
+#main [data-section="1"] img {
+    display: block;
+    margin: 0 auto;
+    padding: 76px 0;
+    max-width: 616px;
+    width: 100%;
+}
+
+#main .video-section {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+#main .video-section::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.66);
+    width: 100%;
+    height: 100%;
+    /* blur todo */
+}
+
+.video-section .video-play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    cursor: pointer;
+    width: 90px;
+    height: 90px;
+}
+
+.video-section .video-play img {
+    width: 100%;
+    transition: transform .3s ease;
+}
+
+.video-section .video-play img:hover {
+    transform: scale(0.96);
+}
+
+#main .my-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#fullpage #main,
+#main .section[data-section="3"] {
+    padding: 66px 0 73px;
+    background-color: #010101;
+}
+
+#main.fp-is-overflow>.fp-overflow {
+    overflow-y: hidden !important;
+}
+
+#main .section[data-section="3"] h2 {
+    color: var(--var-color-primary);
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 33.6px;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 40px;
+}
+
+#main .counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main .counter-single {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main .counter-single-inner div {
+    text-align: center;
+    background-color: var(--var-color-white);
+    color: var(--var-color-black);
+    margin: 0 21px;
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 66px;
+    max-width: 120px;
+    min-width: 120px;
+    width: 100%;
+    padding: 4px 0 5px;
+}
+
+#main .counter-single p {
+    margin-top: 22px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 24.4px;
+    line-height: 28.8px;
+}
+
+#main .main-content {
+    border: 1px solid var(--var-color-white);
+    text-align: center;
+    margin: 69px 0 0;
+    padding: 0 50px 80px;
+    position: relative;
+}
+
+#fullpage #main h3,
+#main .main-content h3 {
+    display: inline;
+    top: -17px;
+    position: relative;
+    background: var(--var-color-black);
+    padding: 0 12px;
+    color: var(--var-color-white);
+}
+
+#main .main-content p {
+    padding-top: 40px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+#main .arrow-down {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(+50%);
+    background-color: var(--var-color-black);
+    padding: 0 24px;
+}
+
+#main .arrow-down svg {
+    fill: var(--var-color-primary);
+}
+
+.video-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.video-container .arrow-down {
+    position: absolute;
+    left: 50%;
+    bottom: 70px;
+    transform: translateX(-50%);
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width:768px) {
+    #main .section[data-section="3"] h2 {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    #main .my-container {
+        padding: 0 15px;
+    }
+
+    #main .main-content {
+        padding: 0 15px 60px;
+        margin-top: 30px;
+    }
+
+    #main .counter {
+        justify-content: space-between;
+    }
+
+    #main .main-content p {
+        padding-top: 8px;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+    }
+
+    #main .main-content h3 {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    #main .counter-single-inner div {
+        line-height: 38px;
+        font-size: 21px;
+        max-width: 60px;
+        min-width: 60px;
+        margin: auto;
+    }
+
+    #main .counter-single p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+/* before premiere */
